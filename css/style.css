@@ -1,0 +1,357 @@
+/* all tags 设置全局属性 */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Microsoft Yahei;
+    font-size: 1.5625vw;
+}
+
+html, body {
+    overflow: hidden;
+}
+
+/* music */
+.music {
+    position: fixed;
+    top: 3vh;
+    right: 4vw;
+    z-index: 5;
+    width: 15vw;
+    height: 15vw;
+    border: 4px solid #ef1939;
+    border-radius: 50%;
+}
+
+.music > img:first-of-type {
+    position: absolute;
+    top: 24%;
+    right: 2.4%;
+    width: 28.421%;
+    z-index: 2;
+}
+
+.music > img:last-of-type {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 79%;
+    margin: auto;
+}
+
+.music .play {
+    animation: music-play 4s linear infinite;
+}
+
+@keyframes music-play {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 定义可视 */
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.first {
+    display: block;
+}
+
+.second {
+    display: none;
+}
+
+.third {
+    display: none;
+    top: 100%;
+}
+
+/* first page */
+.first .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: 100%;
+    background: url("../imgs/p1_bg.jpg") no-repeat center center;
+}
+
+.first > .first_page_loading {
+    background: #ef1939;
+    z-index: 4;
+    animation: first_page_loading 1s linear forwards;
+}
+
+@keyframes first_page_loading {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.first .p1_lantern {
+    position: absolute;
+    top: -3.4%;
+    padding-top: 31vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: white;
+    width: 45vw;
+    height: 71vh;
+    background: url("../imgs/p1_lantern.png") no-repeat center bottom;
+    background-size: 100%;
+    font-size: 3.506rem;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+
+.first .p1_lantern:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: #d60b3b;
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    z-index: -1;
+    content: "";
+    opacity: .5;
+    box-shadow: 0 0 10vw 10vw #d60b3b;
+    -webkit-box-shadow: 0 0 10vw 10vw #d60b3b;
+    -moz-box-shadow: 0 0 10vw 10vw #d60b3b;
+    -moz-o-shadow: 0 0 10vw 10vw #d60b3b;
+    -webkit-animation: p1_lantern .5s linear infinite alternate;
+    animation: p1_lantern .5s linear infinite alternate;
+}
+
+@-webkit-keyframes p1_lantern {
+    0% {
+        -webkit-transform: scale(.8, .8);
+        transform: scale(.8, .8);
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes p1_lantern {
+    0% {
+        -webkit-transform: scale(.8, .8);
+        transform: scale(.8, .8);
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.first .p1_i_mooc {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 9vh;
+    margin: auto;
+    background: url("../imgs/p1_imooc.png") no-repeat center center;
+    background-size: 100%;
+    width: 27.656vw;
+    height: 18.63vh;
+}
+
+.first .p1_words {
+    position: absolute;
+    font-size: 2.134rem;
+    right: 0;
+    left: 0;
+    bottom: 48px;
+    text-align: center;
+    margin: auto;
+    color: black;
+    height: 0;
+}
+
+/* second page */
+.second .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: 100%;
+    background: url("../imgs/p2_bg.jpg") no-repeat center center;
+}
+
+.second .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: url("../imgs/p2_circle_outer.png") no-repeat center center;
+    background-size: 100%;
+    width: 59.625vw;
+    height: 59.625vw;
+    border-radius: 50%;
+    animation: circle 1s linear 3s infinite;
+}
+
+.second .circle:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    text-align: center;
+    background: url("../imgs/p2_circle_middle.png") no-repeat center center;
+    background-size: 100%;
+    width: 45.625vw;
+    height: 45.625vw;
+    border-radius: 50%;
+    animation: circle 1s linear 2s infinite reverse;
+}
+
+.second .circle:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    text-align: center;
+    background: url("../imgs/p2_circle_inner.png") no-repeat center center;
+    background-size: 100%;
+    width: 39.9375vw;
+    height: 39.9375vw;
+    border-radius: 50%;
+    animation: circle 1s linear 1s infinite;
+}
+
+@keyframes circle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    0% {
+        transform: rotate(360deg);
+    }
+}
+
+.second .words {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    background: url("../imgs/p2_2016.png") no-repeat center center;
+    background-size: 100%;
+    width: 27.52vw;
+    height: 27.52vw;
+    border-radius: 50%;
+}
+
+.fadeout {
+    opacity: 0.5;
+    transform: translate(0, -100%);
+}
+
+
+/* third page */
+.third .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: 100%;
+    background: url("../imgs/p3_bg.jpg") no-repeat center center;
+}
+
+.third .logo {
+    position: absolute;
+    top: 7.82vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 34.675vw;
+    height: 6.327vh;
+    background: url("../imgs/p3_logo.png") no-repeat center center;
+    background-size: 100%;
+}
+
+.third .title {
+    position: absolute;
+    top: 20vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 48.125vw;
+    height: 50vh;
+    background: url("../imgs/p3_title.png") no-repeat center center;
+    background-size: 100%;
+}
+
+.third .second {
+    position: absolute;
+    top: 25.48vh;
+    width: 22.8125vw;
+    height: 41.625vh;
+    left: 3.75vw;
+    background: url("../imgs/p3_couplet_second.png") no-repeat center center;
+    background-size: 100%;
+}
+
+.third .first {
+    position: absolute;
+    top: 25.48vh;
+    width: 22.8125vw;
+    height: 41.625vh;
+    right: 3.75vw;
+    background: url("../imgs/p3_couplet_first.png") no-repeat center center;
+    background-size: 100%;
+}
+
+.third .blessing {
+    position: absolute;
+    width: 32vw;
+    height: 32vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0;
+    background: url("../imgs/p3_blessing.png") no-repeat center center;
+    background-size: 100%;
+    animation: p3_blessing 1s linear infinite;
+}
+
+.fadeIn {
+    transform: translate(0, -100%);
+}
+
+@keyframes p3_blessing {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
